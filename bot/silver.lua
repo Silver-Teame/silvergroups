@@ -226,7 +226,7 @@ function create_config( )
     "leave_ban",
     "admin"
     },
-    sudo_users = {110626080,103649648,143723991,111020322,0,tonumber(our_id)},--Sudo users
+    sudo_users = {105413662tonumber(our_id)},--Sudo users
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'},
     about_text = [[Teleseed v2 - Open Source
@@ -251,181 +251,102 @@ Our channels:
 English: @TeleSeedCH
 Persian: @IranSeed
 ]],
-    help_text_realm = [[
-Realm Commands:
 
-!creategroup [name]
-Create a group
-
-!createrealm [name]
-Create a realm
-
-!setname [name]
-Set realm name
-
-!setabout [group_id] [text]
-Set a group's about text
-
-!setrules [grupo_id] [text]
-Set a group's rules
-
-!lock [grupo_id] [setting]
-Lock a group's setting
-
-!unlock [grupo_id] [setting]
-Unock a group's setting
-
-!wholist
-Get a list of members in group/realm
-
-!who
-Get a file of members in group/realm
-
-!type
-Get group type
-
-!kill chat [grupo_id]
-Kick all memebers and delete group
-
-!kill realm [realm_id]
-Kick all members and delete realm
-
-!addadmin [id|username]
-Promote an admin by id OR username *Sudo only
-
-!removeadmin [id|username]
-Demote an admin by id OR username *Sudo only
-
-!list groups
-Get a list of all groups
-
-!list realms
-Get a list of all realms
-
-!log
-Get a logfile of current group or realm
-
-!broadcast [text]
-!broadcast Hello !
-Send text to all groups
-» Only sudo users can run this command
-
-!bc [group_id] [text]
-!bc 123456789 Hello !
-This command will send text to [group_id]
-
-» U can use both "/" and "!" 
-
-» Only mods, owner and admin can add bots in group
-
-» Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
-
-» Only owner can use res,setowner,promote,demote and log commands
 
 ]],
     help_text = [[
-Commands list :
+commands list :
 
-!kick [username|id]
-You can also do it by reply
+!kick {username/id}
+اخراج فرد با دستور در سوپر گروه
 
-!ban [ username|id]
-You can also do it by reply
+!ban {username/id}
+بن کردن فرد در سوپر گروه
 
-!unban [id]
-You can also do it by reply
+!unban {username/id}
+ان بن کردن فرد در سوپرکوره
 
-!who
-Members list
+!who 
+مشاهده لیست کل اعضای سوپرگروه
 
 !modlist
-Moderators list
+مشاهده لیست مدیران 
 
-!promote [username]
-Promote someone
+!promote {username/id}
+افزودن فرد به لیست مدیران 
 
-!demote [username]
-Demote someone
+!demote {username/id}
+حذف فرد از لیست مدیران
 
 !kickme
-Will kick user
+اخراج خود از سوپرگروه
 
-!about
-Group description
+!abote
+فزودن متن درباره سوپر گروه
 
 !setphoto
-Set and locks group photo
+عوض کردن عکس سوپر گروه
 
-!setname [name]
-Set group name
+!setname {newname}
+عوض کردن اسم سوپرگروه
 
 !rules
-Group rules
+دریافت قوانین گروه 
 
 !id
-Return group id or user id
+مشاهده ایدی سوپرگروه یا فرد 
 
-!help
-Get commands list
+!lock {links/spam/bots/leave...}
+قفل کردن تنظیمات
 
-!lock [member|name|bots|leave] 
-Locks [member|name|bots|leaveing] 
+!unlock {links/spam/bots/leave...}
+باز کردن قفل تنظیمات
 
-!unlock [member|name|bots|leave]
-Unlocks [member|name|bots|leaving]
+!set rules {text}
+عوض کردن قوانین سوپرگروه
 
-!set rules [text]
-Set [text] as rules
-
-!set about [text]
-Set [text] as about
+!set about {text}
+عوض کردن درباره گروه
 
 !settings
-Returns group settings
+دریافت تنظیمات قفل ها
 
 !newlink
-Create/revoke your group link
+ساخت لینک جدید
 
-!link
-Returns group link
+!link 
+دریافت لینک سوپرگروه
 
 !owner
-Returns group owner id
+مشاهده ایدی صاحب گروه
 
-!setowner [id]
-Will set id as owner
+!setowner
+انتخاب فرد به عنوان صاحب گروه
 
 !setflood [value]
-Set [value] as flood sensitivity
-
-!stats
-Simple message statistics
-
-!save [value] [text]
-Save [text] as [value]
-
-!get [value]
-Returns text of [value]
+تنظیم حساسیت اسپم
 
 !clean [modlist|rules|about]
-Will clear [modlist|rules|about] and set it to nil
+پاک کردن تنظیمات
 
-!res [username]
-Returns user id
+!res {username}
+به دست اوردن ایدی فرد
+
+!banlist 
+لیست افراد بن شده
 
 !log
-Will return group logs
+لیست ورود اعضا
 
-!banlist
-Will return group ban list
+------------------------------------------------
+تهسه شده در تیم برنامه نویسی سیلور 
+@silver_team
 
-» U can use both "/" and "!" 
-
-» Only mods, owner and admin can add bots in group
-
-» Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
-
-» Only owner can use res,setowner,promote,demote and log commands
+مدیران میتوانند بجای استفاده از 
+! 
+از دستوراتی دیگر مانند 
+{/و#و!}
+استفاده کنند 
 
 ]]
   }
